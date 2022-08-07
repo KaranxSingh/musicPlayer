@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: white;
+    box-sizing: border-box;
+}
+
+.main{
+    /* border: 1px solid red; */
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100v;
+}
+
+.container{
+    /* border: 1px solid gray; */
+    height: 55vh;
+    width: 250px;
+    text-align: center;
+    border-radius: 22px;
+    box-shadow: 0px 0px 40px 10px rgb(0, 255,0 , 0.4);
+    padding: 20px;
+    
+}
+
+#title{
+    text-transform: uppercase;
+    font-size: larger;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    margin: 20px 0px 5px 0px;
+}
+
+#artist{
+    text-transform: uppercase;
+    font-size: smaller;
+    font-weight: 300;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    margin: 20px 0px 5px 0px;
+}
+
+.img_container{
+    /* border: 1px solid red; */
+    height: 170px;
+    width: 170px;
+    margin-left: 43px;
+    margin-top: 40px; 
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+.buttons{
+    /* border: 1px solid red; */
+    cursor: pointer;
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 60px;
+    /* margin-top: 20px when there i will add timeupdater */
+}
+
+.buttons .prev, .buttons .play, .buttons .next{
+    font-size: 20px;
+}
+
+.buttons .prev:hover,
+.buttons .next:hover{
+    color: grey;
+}
+
+
+.anime {
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+
+
+/* additionally added Progress Bar */
+#range{
+    margin-top: 40px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgb(98, 61, 98, 0.6);
+    height: 9px;
+    border-radius: 10px;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+#range::-webkit-slider-thumb{
+    appearance: none;
+    height: 13px;
+    width: 13px;
+    background-color: aquamarine;
+    border-radius: 50%;
+}
+
+#curr_time,
+#total_duration{
+    padding: 5px;
+}
